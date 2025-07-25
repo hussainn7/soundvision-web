@@ -15,7 +15,7 @@ const LanguageToggle = ({ onLanguageChange, currentLanguage }: LanguageTogglePro
         size="sm"
         className={`px-3 py-1 text-xs font-medium rounded-full transition-all duration-300 ${
           currentLanguage === 'en' 
-            ? 'bg-white/20 text-white' 
+            ? 'bg-[#AAFF00]/20 text-[#AAFF00] border border-[#AAFF00]/30' 
             : 'text-white/60 hover:text-white/80 hover:bg-white/10'
         }`}
         onClick={() => onLanguageChange('en')}
@@ -27,7 +27,7 @@ const LanguageToggle = ({ onLanguageChange, currentLanguage }: LanguageTogglePro
         size="sm"
         className={`px-3 py-1 text-xs font-medium rounded-full transition-all duration-300 ${
           currentLanguage === 'ru' 
-            ? 'bg-white/20 text-white' 
+            ? 'bg-[#AAFF00]/20 text-[#AAFF00] border border-[#AAFF00]/30' 
             : 'text-white/60 hover:text-white/80 hover:bg-white/10'
         }`}
         onClick={() => onLanguageChange('ru')}

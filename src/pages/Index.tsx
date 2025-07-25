@@ -11,10 +11,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Background with subtle white opacity */}
+      {/* Background with grid pattern */}
       <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-white/[0.02]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50"></div>
+        {/* Grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `
+            linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
       
       <div className="relative z-10">

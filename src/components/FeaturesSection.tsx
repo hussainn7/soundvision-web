@@ -68,7 +68,7 @@ const FeaturesSection = ({ language }: FeaturesSectionProps) => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {content[language].title}
+            <span className="text-[#AAFF00]">{content[language].title}</span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             {content[language].subtitle}
@@ -79,10 +79,10 @@ const FeaturesSection = ({ language }: FeaturesSectionProps) => {
           {content[language].features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
+              className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-[#AAFF00]/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-[#AAFF00] to-[#AAFF00]/70 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-6 h-6 text-black" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}

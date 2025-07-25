@@ -33,18 +33,10 @@ const ContactSection = ({ language }: ContactSectionProps) => {
 
   return (
     <section id="contact" className="py-24 relative">
-      <div className="absolute inset-0">
-        <img 
-          src="/lovable-uploads/be2588f4-fc1c-403b-910f-a5ee4305d4a3.png" 
-          alt="Smart Glasses"
-          className="absolute left-10 top-1/2 transform -translate-y-1/2 w-80 h-auto opacity-10 -rotate-12"
-        />
-      </div>
-      
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {content[language].title}
+            <span className="text-[#AAFF00]">Ready to Shape</span> <span className="text-white">the Future?</span>
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             {content[language].subtitle}
@@ -57,14 +49,14 @@ const ContactSection = ({ language }: ContactSectionProps) => {
               <div>
                 <Input 
                   placeholder={content[language].form.name}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-500 focus:ring-blue-500/20"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-[#AAFF00] focus:ring-[#AAFF00]/20"
                 />
               </div>
               <div>
                 <Input 
                   type="email"
                   placeholder={content[language].form.email}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-500 focus:ring-blue-500/20"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-[#AAFF00] focus:ring-[#AAFF00]/20"
                 />
               </div>
             </div>
@@ -72,11 +64,11 @@ const ContactSection = ({ language }: ContactSectionProps) => {
               <Textarea 
                 placeholder={content[language].form.message}
                 rows={4}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-500 focus:ring-blue-500/20"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-[#AAFF00] focus:ring-[#AAFF00]/20"
               />
             </div>
             <div className="text-center">
-              <Button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+              <Button className="px-8 py-3 bg-gradient-to-r from-[#AAFF00] to-[#AAFF00]/80 hover:from-[#AAFF00]/90 hover:to-[#AAFF00]/70 text-black font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
                 {content[language].form.submit}
               </Button>
             </div>

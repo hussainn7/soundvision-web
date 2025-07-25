@@ -31,19 +31,11 @@ const AboutSection = ({ language }: AboutSectionProps) => {
 
   return (
     <section id="about" className="py-24 relative">
-      <div className="absolute inset-0">
-        <img 
-          src="/lovable-uploads/2a3c6800-1dd7-4457-9006-f91641537001.png" 
-          alt="Smart Glasses"
-          className="absolute right-10 top-1/2 transform -translate-y-1/2 w-96 h-auto opacity-10 rotate-12"
-        />
-      </div>
-      
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {content[language].title}
+              <span className="text-[#AAFF00]">Young Minds</span>, <span className="text-white">Bright Future</span>
             </h2>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
               {content[language].subtitle}
@@ -52,7 +44,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
               {content[language].description}
             </p>
             
-            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 mb-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-[#AAFF00]/20 mb-8">
               <p className="text-white/90 font-medium italic">
                 "{content[language].mission}"
               </p>
@@ -61,7 +53,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
             <div className="space-y-3">
               {content[language].values.map((value, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#AAFF00] rounded-full"></div>
                   <span className="text-white/80">{value}</span>
                 </div>
               ))}
@@ -69,7 +61,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-md rounded-3xl p-8 border border-white/10">
+            <div className="bg-gradient-to-br from-[#AAFF00]/10 to-purple-600/10 backdrop-blur-md rounded-3xl p-8 border border-white/10">
               <img 
                 src="/lovable-uploads/03e644cf-f071-48fb-aa35-6fc5bf66e763.png" 
                 alt="Smart Glasses Technology"
