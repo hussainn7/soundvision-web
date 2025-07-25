@@ -1,9 +1,9 @@
-
 interface HeroSectionProps {
   language: 'en' | 'ru';
 }
-
-const HeroSection = ({ language }: HeroSectionProps) => {
+const HeroSection = ({
+  language
+}: HeroSectionProps) => {
   const content = {
     en: {
       title: "The Future of",
@@ -14,33 +14,19 @@ const HeroSection = ({ language }: HeroSectionProps) => {
     },
     ru: {
       title: "Будущее",
-      titleHighlight: "Доступного Зрения", 
+      titleHighlight: "Доступного Зрения",
       subtitle: "Умные очки с ИИ, созданные чтобы помочь каждому процветать в подключенном мире",
       cta: "Присоединиться к революции",
       stats: "Доверие новаторов по всему миру"
     }
   };
-
-  return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background glasses */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative w-full h-full max-w-4xl">
-          <img 
-            src="/lovable-uploads/2a3c6800-1dd7-4457-9006-f91641537001.png" 
-            alt="Smart Glasses"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-auto opacity-20 animate-pulse"
-          />
-          <img 
-            src="/lovable-uploads/03e644cf-f071-48fb-aa35-6fc5bf66e763.png" 
-            alt="Smart Glasses Front"
-            className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-80 h-auto opacity-15 animate-pulse animation-delay-1000"
-          />
-          <img 
-            src="/lovable-uploads/be2588f4-fc1c-403b-910f-a5ee4305d4a3.png" 
-            alt="Smart Glasses Side"
-            className="absolute top-1/2 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-80 h-auto opacity-15 animate-pulse animation-delay-2000"
-          />
+          <img src="/lovable-uploads/2a3c6800-1dd7-4457-9006-f91641537001.png" alt="Smart Glasses" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-auto opacity-20 animate-pulse" />
+          <img src="/lovable-uploads/03e644cf-f071-48fb-aa35-6fc5bf66e763.png" alt="Smart Glasses Front" className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-80 h-auto opacity-15 animate-pulse animation-delay-1000" />
+          <img src="/lovable-uploads/be2588f4-fc1c-403b-910f-a5ee4305d4a3.png" alt="Smart Glasses Side" className="absolute top-1/2 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-80 h-auto opacity-15 animate-pulse animation-delay-2000" />
         </div>
       </div>
 
@@ -49,14 +35,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         {/* Trust indicator */}
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <div className="flex -space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 border-2 border-white/20"></div>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 border-2 border-white/20"></div>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-red-500 border-2 border-white/20"></div>
-          </div>
-          <span className="text-white/60 text-sm font-medium">{content[language].stats}</span>
-        </div>
+        
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
           {content[language].title}
@@ -76,8 +55,6 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
