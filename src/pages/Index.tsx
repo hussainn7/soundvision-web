@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'ru'>('en');
@@ -15,11 +16,11 @@ const Index = () => {
       <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-white/[0.02]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50"></div>
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
+        {/* Grid pattern - more visible on hero */}
+        <div className="absolute inset-0 opacity-[0.08]" style={{
           backgroundImage: `
-            linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px'
         }}></div>
@@ -31,6 +32,7 @@ const Index = () => {
         <FeaturesSection language={language} />
         <AboutSection language={language} />
         <ContactSection language={language} />
+        <Footer language={language} />
       </div>
     </div>
   );
