@@ -68,7 +68,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
               />
             </div>
             <div className="text-center">
-              <Button className="px-8 py-3 bg-gradient-to-r from-[#AAFF00] to-[#AAFF00]/80 hover:from-[#AAFF00]/90 hover:to-[#AAFF00]/70 text-black font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+              <Button className="px-8 py-3 bg-gradient-to-r from-[#AAFF00] to-[#AAFF00]/80 hover:from-[#AAFF00]/90 hover:to-[#AAFF00]/70 text-black font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(170,255,0,0.4)]">
                 {content[language].form.submit}
               </Button>
             </div>

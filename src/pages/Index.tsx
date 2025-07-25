@@ -12,17 +12,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Background with grid pattern */}
+      {/* Background with grid pattern only for hero */}
       <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-white/[0.02]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50"></div>
-        {/* Grid pattern - more visible on hero */}
-        <div className="absolute inset-0 opacity-[0.08]" style={{
+        {/* Grid pattern - only visible on hero section */}
+        <div className="absolute inset-0 opacity-[0.15]" style={{
           backgroundImage: `
             linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '50px 50px',
+          maskImage: 'linear-gradient(to bottom, white 100vh, transparent 100vh)',
+          WebkitMaskImage: 'linear-gradient(to bottom, white 100vh, transparent 100vh)'
         }}></div>
       </div>
       
