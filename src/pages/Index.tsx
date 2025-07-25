@@ -12,7 +12,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Background with grid pattern only for hero */}
+      {/* Background for hero section with grid pattern */}
       <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-white/[0.02]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50"></div>
@@ -26,6 +26,14 @@ const Index = () => {
           maskImage: 'linear-gradient(to bottom, white 100vh, transparent 100vh)',
           WebkitMaskImage: 'linear-gradient(to bottom, white 100vh, transparent 100vh)'
         }}></div>
+      </div>
+
+      {/* Clean background for other sections */}
+      <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black" style={{
+        maskImage: 'linear-gradient(to bottom, transparent 100vh, white 100vh)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 100vh, white 100vh)'
+      }}>
+        <div className="absolute inset-0 bg-white/[0.02]"></div>
       </div>
       
       <div className="relative z-10">
