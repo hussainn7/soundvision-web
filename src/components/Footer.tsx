@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 interface FooterProps {
   language: 'en' | 'ru';
@@ -8,7 +8,7 @@ interface FooterProps {
 const Footer = ({ language }: FooterProps) => {
   const content = {
     en: {
-      tagline: "Empowering Vision Through Innovation",
+      tagline: "Glasses that do more.",
       quickLinks: {
         title: "Quick Links",
         links: ["Features", "About", "Contact", "Privacy Policy"]
@@ -17,15 +17,15 @@ const Footer = ({ language }: FooterProps) => {
         title: "Product",
         links: ["SoundVision Pro", "Accessibility Features", "AI Technology", "Early Access"]
       },
-      support: {
-        title: "Support",
-        links: ["Help Center", "Documentation", "Community", "Feedback"]
-      },
+      // support: {
+      //   title: "Support",
+      //   links: ["Help Center", "Documentation", "Community", "Feedback"]
+      // },
       contact: {
         title: "Contact",
-        email: "hello@soundvision.tech",
-        phone: "+1 (555) 123-4567",
-        address: "San Francisco, CA"
+        email: "soundvision.kg@gmail.com",
+        phone: "+996 501 502 085",
+        address: "Bishkek, Kyrgyzstan"
       },
       newsletter: {
         title: "Stay Updated",
@@ -33,11 +33,11 @@ const Footer = ({ language }: FooterProps) => {
         placeholder: "Enter your email",
         button: "Subscribe"
       },
-      copyright: "© 2024 SoundVision. All rights reserved.",
+      copyright: "© 2025 SoundVision. All rights reserved.",
       mission: "Building the future of accessible technology"
     },
     ru: {
-      tagline: "Расширяем Зрение Через Инновации",
+      tagline: "Очки, которые делают больше.",
       quickLinks: {
         title: "Быстрые Ссылки",
         links: ["Функции", "О нас", "Контакты", "Политика Конфиденциальности"]
@@ -46,15 +46,15 @@ const Footer = ({ language }: FooterProps) => {
         title: "Продукт",
         links: ["SoundVision Pro", "Функции Доступности", "ИИ Технологии", "Ранний Доступ"]
       },
-      support: {
-        title: "Поддержка",
-        links: ["Центр Помощи", "Документация", "Сообщество", "Обратная Связь"]
-      },
+      // support: {
+      //   title: "Поддержка",
+      //   links: ["Центр Помощи", "Документация", "Сообщество", "Обратная Связь"]
+      // },
       contact: {
         title: "Контакты",
-        email: "hello@soundvision.tech",
-        phone: "+1 (555) 123-4567",
-        address: "Сан-Франциско, CA"
+        email: "soundvision.kg@gmail.com",
+        phone: "+996 501 502 085",
+        address: "Бишкек, Кыргызстан"
       },
       newsletter: {
         title: "Оставайтесь в Курсе",
@@ -79,7 +79,7 @@ const Footer = ({ language }: FooterProps) => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/d95cb5c1-d1bd-43b3-8347-d8376cd42f14.png" 
+                src="/uploads/logo.png" 
                 alt="SoundVision Logo" 
                 className="w-8 h-8"
               />
@@ -97,15 +97,16 @@ const Footer = ({ language }: FooterProps) => {
             {/* Social links */}
             <div className="flex gap-4">
               {[
-                { icon: Twitter, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Github, href: "#" },
-                { icon: Mail, href: "#" }
+                { icon: Linkedin, href: "https://www.linkedin.com/company/sound-vision-kg/", label: "LinkedIn" },
+                { icon: Mail, href: "mailto:soundvision.kg@gmail.com", label: "Email" }
               ].map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
+                  target={social.icon === Linkedin ? "_blank" : undefined}
+                  rel={social.icon === Linkedin ? "noopener noreferrer" : undefined}
                   className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-[#AAFF00]/20 hover:text-[#AAFF00] transition-all duration-300"
+                  aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -120,7 +121,7 @@ const Footer = ({ language }: FooterProps) => {
               {content[language].quickLinks.links.map((link, index) => (
                 <li key={index}>
                   <a 
-                    href="#" 
+                    href={link === "Privacy Policy" ? "/privacy-policy" : "#"} 
                     className="text-white/70 hover:text-[#AAFF00] transition-colors duration-200"
                   >
                     {link}
@@ -148,7 +149,7 @@ const Footer = ({ language }: FooterProps) => {
           </div>
 
           {/* Support */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">{content[language].support.title}</h3>
             <ul className="space-y-2">
               {content[language].support.links.map((link, index) => (
@@ -162,7 +163,7 @@ const Footer = ({ language }: FooterProps) => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Newsletter section */}
@@ -221,7 +222,7 @@ const Footer = ({ language }: FooterProps) => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/60 text-sm">{content[language].copyright}</p>
             <div className="flex gap-6">
-              <a href="#" className="text-white/60 hover:text-[#AAFF00] text-sm transition-colors">
+              <a href="/privacy-policy" className="text-white/60 hover:text-[#AAFF00] text-sm transition-colors">
                 Privacy Policy
               </a>
               <a href="#" className="text-white/60 hover:text-[#AAFF00] text-sm transition-colors">

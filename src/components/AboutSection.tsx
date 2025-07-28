@@ -8,7 +8,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     en: {
       title: "Young Minds, Bright Future",
       subtitle: "We are a startup dedicated to making technology accessible for everyone",
-      description: "Our team of passionate innovators believes that the future should be inclusive. We're building AI-powered smart glasses that break down barriers and empower people to see the world in new ways.",
+      // description: "Our team of passionate innovators believes that the future should be inclusive. We're building AI-powered smart glasses that break down barriers and empower people to see the world in new ways.",
       mission: "Our mission is simple: provide everyone with accessible glasses that help them thrive in an interconnected world.",
       values: [
         "Innovation through accessibility",
@@ -19,7 +19,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     ru: {
       title: "Молодые Умы, Яркое Будущее",
       subtitle: "Мы стартап, посвященный тому, чтобы сделать технологии доступными для всех",
-      description: "Наша команда увлеченных новаторов верит, что будущее должно быть инклюзивным. Мы создаем умные очки с ИИ, которые разрушают барьеры и дают людям возможность видеть мир по-новому.",
+      // description: "Наша команда увлеченных новаторов верит, что будущее должно быть инклюзивным. Мы создаем умные очки с ИИ, которые разрушают барьеры и дают людям возможность видеть мир по-новому.",
       mission: "Наша миссия проста: предоставить каждому доступные очки, которые помогут им процветать в взаимосвязанном мире.",
       values: [
         "Инновации через доступность",
@@ -40,9 +40,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
               {content[language].subtitle}
             </p>
-            <p className="text-white/70 mb-8 leading-relaxed">
-              {content[language].description}
-            </p>
+
             
             <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-[#AAFF00]/20 mb-8">
               <p className="text-white/90 font-medium italic">
@@ -63,7 +61,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
           <div className="relative">
             <div className="bg-gradient-to-br from-[#AAFF00]/10 to-purple-600/10 backdrop-blur-md rounded-3xl p-8 border border-white/10">
               <img 
-                src="/lovable-uploads/03e644cf-f071-48fb-aa35-6fc5bf66e763.png" 
+                src="/uploads/03e644cf-f071-48fb-aa35-6fc5bf66e763.png" 
                 alt="Smart Glasses Technology"
                 className="w-full h-auto object-contain filter drop-shadow-2xl"
               />

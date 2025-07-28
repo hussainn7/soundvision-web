@@ -4,6 +4,7 @@ import GlassyNavbar from '@/components/GlassyNavbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import AboutSection from '@/components/AboutSection';
+import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -41,6 +42,7 @@ const Index = () => {
         <HeroSection language={language} />
         <FeaturesSection language={language} />
         <AboutSection language={language} />
+        <TeamSection language={language} />
         <ContactSection language={language} />
         <Footer language={language} />
       </div>

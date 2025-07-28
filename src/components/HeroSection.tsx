@@ -6,15 +6,15 @@ interface HeroSectionProps {
 const HeroSection = ({ language }: HeroSectionProps) => {
   const content = {
     en: {
-      title: "The Future of",
-      titleHighlight: "Accessible Vision",
+      title: "See the world",
+      titleHighlight: "differently",
       subtitle: "AI-powered smart glasses designed to help everyone thrive in a connected world",
       cta: "Join the Revolution",
       stats: "Trusted by innovators worldwide"
     },
     ru: {
-      title: "Будущее",
-      titleHighlight: "Доступного Зрения",
+      title: "Смотри на мир",
+      titleHighlight: "по-другому",
       subtitle: "Умные очки с ИИ, созданные чтобы помочь каждому процветать в подключенном мире",
       cta: "Присоединиться к революции",
       stats: "Доверие новаторов по всему миру"
@@ -24,13 +24,13 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
       {/* Smart glasses background image */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      {/* <div className="absolute inset-0 flex items-center justify-center">
         <img 
-          src="/lovable-uploads/f51ead8a-af2b-403f-8353-ae910b21f6b2.png" 
+          src="/uploads/f51ead8a-af2b-403f-8353-ae910b21f6b2.png" 
           alt="Smart Glasses" 
           className="w-96 h-96 object-contain opacity-10 animate-pulse"
         />
-      </div>
+      </div> */}
 
       {/* Subtle background elements */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -41,13 +41,20 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       {/* Glass morphism overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-50 text-center max-w-4xl mx-auto px-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-relaxed overflow-visible">
           <span className="inline-block animate-fade-in opacity-0 animation-delay-500" style={{ animationFillMode: 'forwards' }}>
             {content[language].title}
           </span>
           <br />
-          <span className="inline-block bg-gradient-to-r from-[#AAFF00] via-[#AAFF00] to-purple-400 bg-clip-text text-transparent animate-fade-in opacity-0 animation-delay-1000" style={{ animationFillMode: 'forwards' }}>
+          <span className="inline-block bg-gradient-to-r from-[#AAFF00] via-purple-400 to-[#AAFF00] via-purple-400 to-[#AAFF00] bg-clip-text text-transparent animate-fade-in animation-delay-1000 pb-2" style={{ 
+            animationFillMode: 'forwards',
+            backgroundSize: '300% 100%',
+            backgroundPosition: '0% 50%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            animation: 'gradientFlow 9s linear infinite'
+          }}>
             {content[language].titleHighlight}
           </span>
         </h1>

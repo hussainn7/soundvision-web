@@ -79,17 +79,43 @@ const FeaturesSection = ({ language }: FeaturesSectionProps) => {
           {content[language].features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-[#AAFF00]/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
+              className="group relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 
+                         hover:bg-white/10 hover:border-[#AAFF00]/30 transition-all duration-500 
+                         hover:scale-105 hover:shadow-2xl hover:shadow-[#AAFF00]/20
+                         transform-gpu perspective-1000"
+              style={{
+                transformStyle: 'preserve-3d',
+              }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#AAFF00] to-[#AAFF00]/70 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-6 h-6 text-black" />
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#AAFF00]/0 via-[#AAFF00]/20 to-[#AAFF00]/0 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+              
+              {/* 3D tilt effect container */}
+              <div className="relative z-10 transform-gpu transition-transform duration-500 group-hover:rotate-x-6 group-hover:rotate-y-6"
+                   style={{
+                     transformStyle: 'preserve-3d',
+                   }}>
+                <div className="w-12 h-12 bg-gradient-to-br from-[#AAFF00] to-[#AAFF00]/70 rounded-xl flex items-center justify-center mb-4 
+                              group-hover:scale-110 transition-transform duration-300 group-hover:shadow-lg group-hover:shadow-[#AAFF00]/50"
+                     style={{
+                       transform: 'translateZ(20px)',
+                     }}>
+                  <feature.icon className="w-6 h-6 text-black" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#AAFF00] transition-colors duration-300"
+                     style={{
+                       transform: 'translateZ(10px)',
+                     }}>
+                  {feature.title}
+                </h3>
+                <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors duration-300"
+                   style={{
+                     transform: 'translateZ(5px)',
+                   }}>
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-white/70 leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>
